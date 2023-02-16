@@ -1,16 +1,16 @@
 <?php
-// session_start();
-//  $is_admin = $_SESSION['is_admin'];
+session_start();
+ $is_admin = $_SESSION['is_admin'];
 
-// if($is_admin == NULL) {
-//     header("Location: profile.php");
-// }
+if($is_admin == NULL) {
+    header("Location: profile.php");
+}
 
 require 'db/connect.php';
 
-// if(!isset($_SESSION['email'])) {
-//     header("Location: index.php");
-// }
+if(!isset($_SESSION['email'])) {
+    header("Location: index.php");
+}
 $result_per_page = 2;
 $query = "SELECT * FROM thanhvien";
 $result = mysqli_query ($connect, $query);
